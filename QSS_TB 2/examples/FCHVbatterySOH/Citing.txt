@@ -1,0 +1,37 @@
+﻿If your research is inspired by the Matlab code provided in this
+example, please include the following entries in your bibliography.
+
+[1] X. Hu, L. Johannesson, N. Murgovski, and B. Egardt.
+Longevity-conscious dimensioning and power management of the hybrid
+energy storage system for a fuel cell hybrid electric bus. Applied Energy, 
+vol. 137, pp. 913-924, 2015.
+
+[2] L. Johannesson, N. Murgovski, S. Ebbessen, B. Egardt, E. Gelso,
+and J. Hellgren. Including a battery state of health model in the
+HEV component sizing and optimal control problem. In IFAC Symposium
+on Advances in Automotive Control, Tokyo, Japan, 2013.
+
+The corresponding BibTeX citations are:
+
+@ARTICLE{hu15b,
+  AUTHOR =       {Xiaosong Hu and Lars Johannesson and Nikolce Murgovski and Bo Egardt},
+  TITLE =        {Longevity-conscious dimensioning and power management of the hybrid energy storage system for a fuel cell hybrid electric bus},
+  JOURNAL =      {Applied Energy},
+  YEAR =         {2015},
+  volume =       {137},
+  pages =        {913-924},
+}
+
+@CONFERENCE{johannesson13,
+  author =       {Lars Johannesson and Nikolce Murgovski and Soren Ebbessen and Bo Egardt and Esteban Gelso and Jonas Hellgren},
+  title =        {Including a Battery State of Health model in the {HEV} component sizing and optimal control problem},
+  booktitle =    {IFAC Symposium on Advances in Automotive Control},
+  year =         {2013},
+  address =      {Tokyo, Japan},
+}
+
+
+
+
+=====================================================================
+Created by Nikolce Murgovski, 2014-02.

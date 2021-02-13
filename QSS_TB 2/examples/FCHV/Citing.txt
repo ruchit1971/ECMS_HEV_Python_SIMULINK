@@ -1,0 +1,23 @@
+If your research is inspired by the Matlab code provided in this
+example, please include the following entry in your bibliography.
+
+[1] N. Murgovski, X. Hu, L. Johannesson, B. Egardt. Combined design and 
+control optimization of hybrid vehicles. Handbook of Clean Energy Systems, 
+1-14, 2015.
+
+The corresponding BibTeX citation is:
+
+@INBOOK{murgovski15bookch,
+  author =       {Nikolce Murgovski and Xiaosong Hu and Lars Johannesson and Bo Egardt},
+  title =        {Combined design and control optimization of hybrid vehicles},
+  booktitle =    {Handbook of Clean Energy Systems},
+  publisher =    {John Wiley & Sons, Ltd},
+  year =         {2015},
+  doi =          {10.1002/9781118991978.hces110},
+  isbn =         {9781118991978},
+}
+
+
+
+=====================================================================
+Created by Nikolce Murgovski, 2014-02-11.

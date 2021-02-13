@@ -1,0 +1,2602 @@
+Model {
+  Name			  "qss_example_shv"
+  Version		  6.3
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.12"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "ibm-5348_P100-1997"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Mar 16 08:17:21 2005"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "mo"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Oct 25 10:09:01 2007"
+  ModelVersionFormat	  "1.%<AutoIncrement:12>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  StrictBusMsg		  "None"
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.1.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.1.0"
+	  StartTime		  "0.0"
+	  StopTime		  "1220"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "VariableStepDiscrete"
+	  SolverName		  "VariableStepDiscrete"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.1.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.1.0"
+	  BlockReduction	  on
+	  BooleanDataType	  off
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.1.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.1.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.1.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.1.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.1.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      CustomSymbolStr	      "$R$N$M"
+	      MangleLength	      1
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		12
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.1.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Abs
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Clock
+      DisplayTime	      off
+    }
+    Block {
+      BlockType		      CombinatorialLogic
+      TruthTable	      "[0 0;0 1;0 1;1 0;0 1;1 0;1 0;1 1]"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      ShowOutputPort	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Fcn
+      Expr		      "sin(u[1])"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      AllPortsSameDT	      on
+      OutDataTypeMode	      "Logical (see Configuration Parameters: Optimiza"
+"tion)"
+      LogicDataType	      "uint(8)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Lookup
+      InputValues	      "[-4:5]"
+      OutputValues	      " rand(1,10)-0.5"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      Lookup2D
+      RowIndex		      "[0 1]"
+      ColumnIndex	      "[0 1]"
+      OutputValues	      "[0 0;0 0]"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      Memory
+      X0		      "0"
+      InheritSampleTime	      off
+      LinearizeMemory	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      LogicOutDataTypeMode    "Logical (see Configuration Parameters: Optimiza"
+"tion)"
+      LogicDataType	      "uint(8)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Signum
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Stop
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "qss_example_shv"
+    Location		    [7, 82, 922, 561]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      "Battery"
+      Tag		      "battery"
+      Ports		      [2, 2]
+      Position		      [700, 148, 775, 217]
+      BackgroundColor	      "gray"
+      SourceBlock	      "qss_tb_library/Energy Buffer/Battery"
+      SourceType	      "Battery"
+      ShowPortLabels	      on
+      I_0		      "100"
+      Q_BT_IC_rel	      "27.78"
+      t_ch		      "20"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Battery Controller"
+      Ports		      [1, 3]
+      Position		      [180, 308, 265, 392]
+      BackgroundColor	      "lightBlue"
+      SourceBlock	      "qss_tb_library/Controller/Battery Controller"
+      SourceType	      "Battery Controller"
+      ShowPortLabels	      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Combustion Engine"
+      Tag		      "combustion engine"
+      Ports		      [3, 1]
+      Position		      [470, 307, 545, 393]
+      BackgroundColor	      "red"
+      SourceBlock	      "qss_tb_library/Energy Converter/Combustion Engi"
+"ne\n(consumption map)"
+      SourceType	      "Combustion Engine (based on consumption map)"
+      ShowPortLabels	      on
+      engine_type	      "Otto"
+      V_d		      "0.708"
+      scale_CE		      "0.5"
+      theta_CE		      "0.05"
+      w_CE_idle		      "105"
+      P_CE_idle		      "0"
+      P_aux		      "0"
+      ENABLE_FUEL_CUTOFF      off
+      T_CE_cutoff	      "0"
+      P_CE_cutoff	      "0"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display"
+      Ports		      [1]
+      Position		      [730, 348, 815, 382]
+      BackgroundColor	      "cyan"
+      Decimation	      "1"
+      Lockdown		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Driving Cycle"
+      Tag		      "cycle"
+      Ports		      [0, 4]
+      Position		      [35, 56, 130, 239]
+      BackgroundColor	      "green"
+      SourceBlock	      "qss_tb_library/Driving Cycle/Driving Cycle"
+      SourceType	      "Driving Cycle"
+      ShowPortLabels	      on
+      cyclenr		      "Europe: NEDC"
+      stepsize		      "1"
+      autostop		      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Electric Generator"
+      Ports		      [2, 1]
+      Position		      [470, 181, 545, 279]
+      BackgroundColor	      "red"
+      SourceBlock	      "qss_tb_library/Energy Converter/Electric Genera"
+"tor"
+      SourceType	      "Electric Generator"
+      ShowPortLabels	      on
+      scale_EG		      "2"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Electric Motor"
+      Ports		      [3, 1]
+      Position		      [470, 55, 545, 145]
+      BackgroundColor	      "red"
+      SourceBlock	      "qss_tb_library/Energy Converter/Electric Motor"
+      SourceType	      "Electric Motor"
+      ShowPortLabels	      on
+      scale_EM		      "3.5"
+      theta_EM		      "0.1"
+      P_aux		      "0"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Electric power balance"
+      Ports		      [2, 1]
+      Position		      [595, 36, 620, 294]
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutScaling	      "2^-10"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground"
+      Position		      [645, 190, 665, 210]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Tank"
+      Tag		      "tank"
+      Ports		      [2, 1]
+      Position		      [595, 336, 705, 389]
+      BackgroundColor	      "cyan"
+      SourceBlock	      "qss_tb_library/Energy Source/Tank"
+      SourceType	      "Tank"
+      ShowPortLabels	      on
+      fuel		      "Gasoline"
+      flag_cold_start	      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      Position		      [805, 190, 825, 210]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator1"
+      Position		      [435, 220, 455, 240]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator2"
+      Position		      [180, 160, 200, 180]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Transmission\nCE-EG"
+      Tag		      "simple transmission"
+      Ports		      [3, 3]
+      Position		      [320, 190, 410, 270]
+      BackgroundColor	      "darkGreen"
+      AncestorBlock	      "qss_tb_library/Gear System/Transmission"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskHideContents	      off
+      MaskType		      "Transmission"
+      MaskDescription	      "This block simulates a transmission with a fixe"
+"d gear ratio. \n\nInput:\n=====\n	w_wheel	Speed of the wheel [r"
+"ad/s]\n	dw_wheel	Acceleration of the wheel [rad/s^2]\n	T"
+"_wheel	Torque on the wheel [Nm]\n\nOutput:\n======\n	w_trans"
+"		Speed of the fly wheel [rad/s]\n	dw_trans	Accel"
+"eration of the fly wheel [rad/s^2]\n	T_trans		Torque on "
+"the fly wheel [Nm]"
+      MaskPromptString	      "Gear ratio [-]|Efficiency [-]|Idling losses (fr"
+"iction) [W]|Minimum wheel speed beyond which losses are generated [rad/s]"
+      MaskStyleString	      "edit,edit,edit,edit"
+      MaskTunableValueString  "on,on,on,on"
+      MaskCallbackString      "|||"
+      MaskEnableString	      "on,on,on,on"
+      MaskVisibilityString    "on,on,on,on"
+      MaskToolTipString	      "on,on,on,on"
+      MaskVarAliasString      ",,,"
+      MaskVariables	      "gear_ratio=@1;e_GT=@2;P_GT0=@3;w_wheel_min=@4;"
+      MaskInitialization      "init_transmission;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "0.75|0.98|200|1"
+      MaskTabNameString	      ",,,"
+      System {
+	Name			"Transmission\nCE-EG"
+	Location		[453, 170, 1122, 616]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "w_wheel"
+	  Position		  [55, 33, 85, 47]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dw_wheel"
+	  Position		  [55, 98, 85, 112]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_wheel"
+	  Position		  [55, 223, 85, 237]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [45, 259, 95, 281]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  Value			  "gear_ratio"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Power flow"
+	  Ports			  [3, 1]
+	  Position		  [220, 168, 295, 292]
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Power flow"
+	    Location		    [318, 238, 703, 500]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "w_wheel"
+	      Position		      [15, 23, 45, 37]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T_wheel"
+	      Position		      [15, 112, 45, 128]
+	      BackgroundColor	      "green"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "gear_ratio"
+	      Position		      [15, 203, 45, 217]
+	      BackgroundColor	      "green"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Energy\nEngine -> Wheel"
+	      Ports		      [3, 1]
+	      Position		      [135, 20, 225, 80]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskHideContents	      off
+	      System {
+		Name			"Energy\nEngine -> Wheel"
+		Location		[536, 333, 901, 729]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "w_wheel"
+		  Position		  [15, 53, 45, 67]
+		  BackgroundColor	  "green"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "T_wheel"
+		  Position		  [15, 193, 45, 207]
+		  BackgroundColor	  "green"
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "gear_ratio"
+		  Position		  [15, 288, 45, 302]
+		  BackgroundColor	  "green"
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [15, 116, 60, 134]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  Value			  "P_GT0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant2"
+		  Position		  [70, 82, 90, 98]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  Value			  "inf"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [115, 272, 175, 318]
+		  BackgroundColor	  "yellow"
+		  ShowName		  off
+		  Gain			  "e_GT"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  Ports			  [2, 1]
+		  Position		  [265, 76, 280, 369]
+		  ShowName		  off
+		  Inputs		  "*/"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product3"
+		  Ports			  [2, 1]
+		  Position		  [165, 27, 180, 158]
+		  ShowName		  off
+		  Inputs		  "/*"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [215, 40, 230, 255]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch1"
+		  Position		  [115, 16, 135, 104]
+		  ShowName		  off
+		  Threshold		  "w_wheel_min"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "T_trans+"
+		  Position		  [310, 218, 340, 232]
+		  BackgroundColor	  "red"
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "gear_ratio"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Switch1"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "w_wheel"
+		  SrcPort		  1
+		  Points		  [35, 0]
+		  Branch {
+		    Points		    [0, -30]
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "T_trans+"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Product3"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "T_wheel"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Energy\nWheel -> Engine"
+	      Ports		      [3, 1]
+	      Position		      [135, 160, 225, 220]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskHideContents	      off
+	      System {
+		Name			"Energy\nWheel -> Engine"
+		Location		[116, 197, 554, 573]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "w_wheel"
+		  Position		  [25, 18, 55, 32]
+		  BackgroundColor	  "green"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "T_wheel"
+		  Position		  [25, 63, 55, 77]
+		  BackgroundColor	  "green"
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "gear_ratio"
+		  Position		  [25, 263, 55, 277]
+		  BackgroundColor	  "green"
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [20, 202, 85, 218]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  Value			  "P_GT0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant2"
+		  Position		  [50, 157, 70, 173]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  Value			  "inf"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain1"
+		  Position		  [150, 117, 230, 153]
+		  BackgroundColor	  "yellow"
+		  ShowName		  off
+		  Gain			  "e_GT"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain2"
+		  Position		  [150, 248, 240, 292]
+		  BackgroundColor	  "yellow"
+		  ShowName		  off
+		  Gain			  "1/e_GT"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  Ports			  [2, 1]
+		  Position		  [340, 51, 355, 344]
+		  ShowName		  off
+		  Inputs		  "*/"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product3"
+		  Ports			  [2, 1]
+		  Position		  [255, 99, 270, 246]
+		  ShowName		  off
+		  Inputs		  "/*"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [295, 15, 310, 230]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch1"
+		  Position		  [110, 91, 130, 179]
+		  ShowName		  off
+		  Threshold		  "w_wheel_min"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "T_trans-"
+		  Position		  [380, 193, 410, 207]
+		  BackgroundColor	  "red"
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Gain1"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product3"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "T_trans-"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain2"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "T_wheel"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Switch1"
+		  SrcPort		  1
+		  DstBlock		  "Gain1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "gear_ratio"
+		  SrcPort		  1
+		  DstBlock		  "Gain2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "w_wheel"
+		  SrcPort		  1
+		  Points		  [25, 0; 0, 80]
+		  Branch {
+		    Points		    [0, 30]
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch1"
+	      Position		      [260, 12, 290, 228]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "T_trans"
+	      Position		      [325, 113, 355, 127]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "Switch1"
+	      SrcPort		      1
+	      DstBlock		      "T_trans"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Energy\nEngine -> Wheel"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "T_wheel"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"Switch1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -70]
+		DstBlock		"Energy\nEngine -> Wheel"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 70]
+		DstBlock		"Energy\nWheel -> Engine"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Energy\nWheel -> Engine"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "gear_ratio"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		Points			[0, -140]
+		DstBlock		"Energy\nEngine -> Wheel"
+		DstPort			3
+	      }
+	      Branch {
+		DstBlock		"Energy\nWheel -> Engine"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "w_wheel"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      Branch {
+		DstBlock		"Energy\nEngine -> Wheel"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 140]
+		DstBlock		"Energy\nWheel -> Engine"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [280, 26, 295, 84]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [280, 91, 295, 149]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [480, 65, 495, 225]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  Position		  [335, 80, 385, 100]
+	  BackgroundColor	  "magenta"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  VariableName		  "w_trans_2"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace2"
+	  Position		  [335, 255, 385, 275]
+	  BackgroundColor	  "magenta"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  VariableName		  "T_trans_2"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace3"
+	  Position		  [525, 135, 575, 155]
+	  BackgroundColor	  "magenta"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  VariableName		  "P_trans_2"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "w_trans"
+	  Position		  [345, 48, 375, 62]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dw_trans"
+	  Position		  [345, 113, 375, 127]
+	  BackgroundColor	  "red"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "T_trans"
+	  Position		  [345, 223, 375, 237]
+	  BackgroundColor	  "red"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "w_wheel"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  Branch {
+	    Points		    [0, 150]
+	    DstBlock		    "Power flow"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Product"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -135]
+	    Branch {
+	      Points		      [0, -65]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "Product1"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Power flow"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "T_wheel"
+	  SrcPort		  1
+	  DstBlock		  "Power flow"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "dw_wheel"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 35]
+	    Branch {
+	      Points		      [0, 15]
+	      DstBlock		      "Product3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "To Workspace1"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "w_trans"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "dw_trans"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Power flow"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [0, -45]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "To Workspace2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "T_trans"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Transmission \nVehicle-EM"
+      Tag		      "simple transmission"
+      Ports		      [3, 3]
+      Position		      [320, 54, 410, 146]
+      BackgroundColor	      "darkGreen"
+      AncestorBlock	      "qss_tb_library/Gear System/Transmission"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskHideContents	      off
+      MaskType		      "Transmission"
+      MaskDescription	      "This block simulates a transmission with a fixe"
+"d gear ratio. \n\nInput:\n=====\n	w_wheel	Speed of the wheel [r"
+"ad/s]\n	dw_wheel	Acceleration of the wheel [rad/s^2]\n	T"
+"_wheel	Torque on the wheel [Nm]\n\nOutput:\n======\n	w_trans"
+"		Speed of the fly wheel [rad/s]\n	dw_trans	Accel"
+"eration of the fly wheel [rad/s^2]\n	T_trans		Torque on "
+"the fly wheel [Nm]"
+      MaskPromptString	      "Gear ratio [-]|Efficiency [-]|Idling losses (fr"
+"iction) [W]|Minimum wheel speed beyond which losses are generated [rad/s]"
+      MaskStyleString	      "edit,edit,edit,edit"
+      MaskTunableValueString  "on,on,on,on"
+      MaskCallbackString      "|||"
+      MaskEnableString	      "on,on,on,on"
+      MaskVisibilityString    "on,on,on,on"
+      MaskToolTipString	      "on,on,on,on"
+      MaskVarAliasString      ",,,"
+      MaskVariables	      "gear_ratio=@1;e_GT=@2;P_GT0=@3;w_wheel_min=@4;"
+      MaskInitialization      "init_transmission;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "3.5|0.98|300|1"
+      MaskTabNameString	      ",,,"
+      System {
+	Name			"Transmission \nVehicle-EM"
+	Location		[453, 170, 1122, 616]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "w_wheel"
+	  Position		  [55, 33, 85, 47]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dw_wheel"
+	  Position		  [55, 98, 85, 112]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_wheel"
+	  Position		  [55, 223, 85, 237]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [45, 259, 95, 281]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  Value			  "gear_ratio"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Power flow"
+	  Ports			  [3, 1]
+	  Position		  [220, 168, 295, 292]
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Power flow"
+	    Location		    [318, 238, 703, 500]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "w_wheel"
+	      Position		      [15, 23, 45, 37]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T_wheel"
+	      Position		      [15, 112, 45, 128]
+	      BackgroundColor	      "green"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "gear_ratio"
+	      Position		      [15, 203, 45, 217]
+	      BackgroundColor	      "green"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Energy\nEngine -> Wheel"
+	      Ports		      [3, 1]
+	      Position		      [135, 20, 225, 80]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskHideContents	      off
+	      System {
+		Name			"Energy\nEngine -> Wheel"
+		Location		[536, 333, 901, 729]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "w_wheel"
+		  Position		  [15, 53, 45, 67]
+		  BackgroundColor	  "green"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "T_wheel"
+		  Position		  [15, 193, 45, 207]
+		  BackgroundColor	  "green"
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "gear_ratio"
+		  Position		  [15, 288, 45, 302]
+		  BackgroundColor	  "green"
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [15, 116, 60, 134]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  Value			  "P_GT0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant2"
+		  Position		  [70, 82, 90, 98]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  Value			  "inf"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [115, 272, 175, 318]
+		  BackgroundColor	  "yellow"
+		  ShowName		  off
+		  Gain			  "e_GT"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  Ports			  [2, 1]
+		  Position		  [265, 76, 280, 369]
+		  ShowName		  off
+		  Inputs		  "*/"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product3"
+		  Ports			  [2, 1]
+		  Position		  [165, 27, 180, 158]
+		  ShowName		  off
+		  Inputs		  "/*"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [215, 40, 230, 255]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch1"
+		  Position		  [115, 16, 135, 104]
+		  ShowName		  off
+		  Threshold		  "w_wheel_min"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "T_trans+"
+		  Position		  [310, 218, 340, 232]
+		  BackgroundColor	  "red"
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "gear_ratio"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Switch1"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "w_wheel"
+		  SrcPort		  1
+		  Points		  [35, 0]
+		  Branch {
+		    Points		    [0, -30]
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "T_trans+"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Product3"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "T_wheel"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Energy\nWheel -> Engine"
+	      Ports		      [3, 1]
+	      Position		      [135, 160, 225, 220]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskHideContents	      off
+	      System {
+		Name			"Energy\nWheel -> Engine"
+		Location		[116, 197, 554, 573]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "w_wheel"
+		  Position		  [25, 18, 55, 32]
+		  BackgroundColor	  "green"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "T_wheel"
+		  Position		  [25, 63, 55, 77]
+		  BackgroundColor	  "green"
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "gear_ratio"
+		  Position		  [25, 263, 55, 277]
+		  BackgroundColor	  "green"
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [20, 202, 85, 218]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  Value			  "P_GT0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant2"
+		  Position		  [50, 157, 70, 173]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  Value			  "inf"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain1"
+		  Position		  [150, 117, 230, 153]
+		  BackgroundColor	  "yellow"
+		  ShowName		  off
+		  Gain			  "e_GT"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain2"
+		  Position		  [150, 248, 240, 292]
+		  BackgroundColor	  "yellow"
+		  ShowName		  off
+		  Gain			  "1/e_GT"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  Ports			  [2, 1]
+		  Position		  [340, 51, 355, 344]
+		  ShowName		  off
+		  Inputs		  "*/"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product3"
+		  Ports			  [2, 1]
+		  Position		  [255, 99, 270, 246]
+		  ShowName		  off
+		  Inputs		  "/*"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [295, 15, 310, 230]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch1"
+		  Position		  [110, 91, 130, 179]
+		  ShowName		  off
+		  Threshold		  "w_wheel_min"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "T_trans-"
+		  Position		  [380, 193, 410, 207]
+		  BackgroundColor	  "red"
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Gain1"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product3"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "T_trans-"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain2"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "T_wheel"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Switch1"
+		  SrcPort		  1
+		  DstBlock		  "Gain1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Switch1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "gear_ratio"
+		  SrcPort		  1
+		  DstBlock		  "Gain2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "w_wheel"
+		  SrcPort		  1
+		  Points		  [25, 0; 0, 80]
+		  Branch {
+		    Points		    [0, 30]
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch1"
+	      Position		      [260, 12, 290, 228]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "T_trans"
+	      Position		      [325, 113, 355, 127]
+	      BackgroundColor	      "red"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "Switch1"
+	      SrcPort		      1
+	      DstBlock		      "T_trans"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Energy\nEngine -> Wheel"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "T_wheel"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"Switch1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -70]
+		DstBlock		"Energy\nEngine -> Wheel"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 70]
+		DstBlock		"Energy\nWheel -> Engine"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Energy\nWheel -> Engine"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "gear_ratio"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		Points			[0, -140]
+		DstBlock		"Energy\nEngine -> Wheel"
+		DstPort			3
+	      }
+	      Branch {
+		DstBlock		"Energy\nWheel -> Engine"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "w_wheel"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      Branch {
+		DstBlock		"Energy\nEngine -> Wheel"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 140]
+		DstBlock		"Energy\nWheel -> Engine"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [280, 26, 295, 84]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [280, 91, 295, 149]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [480, 65, 495, 225]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  Position		  [335, 80, 385, 100]
+	  BackgroundColor	  "magenta"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  VariableName		  "w_trans_1"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace2"
+	  Position		  [335, 255, 385, 275]
+	  BackgroundColor	  "magenta"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  VariableName		  "T_trans_1"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace3"
+	  Position		  [525, 135, 575, 155]
+	  BackgroundColor	  "magenta"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  VariableName		  "P_trans_1"
+	  MaxDataPoints		  "inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "w_trans"
+	  Position		  [345, 48, 375, 62]
+	  BackgroundColor	  "red"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dw_trans"
+	  Position		  [345, 113, 375, 127]
+	  BackgroundColor	  "red"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "T_trans"
+	  Position		  [345, 223, 375, 237]
+	  BackgroundColor	  "red"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "w_wheel"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  Branch {
+	    Points		    [0, 150]
+	    DstBlock		    "Power flow"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Product"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -135]
+	    Branch {
+	      Points		      [0, -65]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "Product1"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Power flow"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "T_wheel"
+	  SrcPort		  1
+	  DstBlock		  "Power flow"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "dw_wheel"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 35]
+	    Branch {
+	      Points		      [0, 15]
+	      DstBlock		      "Product3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "To Workspace1"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "w_trans"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "dw_trans"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Power flow"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [0, -45]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "To Workspace2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "T_trans"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Vehicle"
+      Tag		      "vehicle"
+      Ports		      [2, 3]
+      Position		      [180, 57, 265, 143]
+      BackgroundColor	      "yellow"
+      SourceBlock	      "qss_tb_library/Vehicle/Vehicle"
+      SourceType	      "Vehicle"
+      ShowPortLabels	      on
+      m_f		      "750+200"
+      mt2m_f		      "5"
+      A_f		      "2"
+      d_wheel		      "0.5"
+      cw		      "0.22"
+      mu		      "0.008"
+    }
+    Line {
+      SrcBlock		      "Driving Cycle"
+      SrcPort		      1
+      DstBlock		      "Vehicle"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Driving Cycle"
+      SrcPort		      2
+      DstBlock		      "Vehicle"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Vehicle"
+      SrcPort		      1
+      DstBlock		      "Transmission \nVehicle-EM"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Vehicle"
+      SrcPort		      2
+      DstBlock		      "Transmission \nVehicle-EM"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Vehicle"
+      SrcPort		      3
+      DstBlock		      "Transmission \nVehicle-EM"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Driving Cycle"
+      SrcPort		      3
+      DstBlock		      "Terminator2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Transmission \nVehicle-EM"
+      SrcPort		      1
+      DstBlock		      "Electric Motor"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Transmission \nVehicle-EM"
+      SrcPort		      2
+      DstBlock		      "Electric Motor"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Transmission \nVehicle-EM"
+      SrcPort		      3
+      DstBlock		      "Electric Motor"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Transmission\nCE-EG"
+      SrcPort		      1
+      DstBlock		      "Electric Generator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Transmission\nCE-EG"
+      SrcPort		      3
+      DstBlock		      "Electric Generator"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Electric Motor"
+      SrcPort		      1
+      DstBlock		      "Electric power balance"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Electric Generator"
+      SrcPort		      1
+      DstBlock		      "Electric power balance"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Battery Controller"
+      SrcPort		      1
+      Points		      [0, 0; 10, 0]
+      Branch {
+	DstBlock		"Combustion Engine"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -115]
+	DstBlock		"Transmission\nCE-EG"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Battery Controller"
+      SrcPort		      2
+      Points		      [0, 0; 20, 0]
+      Branch {
+	DstBlock		"Combustion Engine"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -120]
+	DstBlock		"Transmission\nCE-EG"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Battery Controller"
+      SrcPort		      3
+      Points		      [0, 0; 30, 0]
+      Branch {
+	DstBlock		"Combustion Engine"
+	DstPort			3
+      }
+      Branch {
+	Points			[0, -125]
+	DstBlock		"Transmission\nCE-EG"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Combustion Engine"
+      SrcPort		      1
+      DstBlock		      "Tank"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Electric power balance"
+      SrcPort		      1
+      DstBlock		      "Battery"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Battery"
+      SrcPort		      1
+      Points		      [75, 0; 0, 275; -695, 0; 0, -90]
+      DstBlock		      "Battery Controller"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Driving Cycle"
+      SrcPort		      4
+      Points		      [15, 0; 0, 235; 430, 0]
+      DstBlock		      "Tank"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Battery"
+      SrcPort		      2
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ground"
+      SrcPort		      1
+      DstBlock		      "Battery"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Transmission\nCE-EG"
+      SrcPort		      2
+      DstBlock		      "Terminator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Tank"
+      SrcPort		      1
+      DstBlock		      "Display"
+      DstPort		      1
+    }
+  }
+}

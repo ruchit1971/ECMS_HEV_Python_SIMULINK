@@ -1,0 +1,51 @@
+If your research is inspired by the Matlab code provided in this
+example, please include at least one of the following entries in
+your bibliography.
+
+[1] N. Murgovski, L. Johannesson, J. Sjöberg and B. Egardt.
+Component sizing of a plug-in hybrid electric powertrain via convex
+optimization. Journal of Mechatronics, 22(1):106-120, 2012.
+
+[2] N. Murgovski, L. Johannesson, A. Grauers and J. Sjöberg.
+Dimensioning and control of a thermally constrained double buffer
+plug-in HEV powertrain. In 51st IEEE Conference on Decision and
+Control, Maui, Hawaii, 2012.
+
+[3] X. Hu, N. Murgovski, L. Johannesson and B. Egardt. Energy
+efficiency analysis of a series plug-in hybrid electric bus with
+different energy management strategies and battery sizes. Applied
+Energy, 111:1001-1009, 2013.
+
+The corresponding BibTeX citations are:
+
+@ARTICLE{murgovski12Mec,
+  AUTHOR =       {Nikolce Murgovski and Lars Johannesson and Jonas Sj\"oberg and Bo Egardt},
+  TITLE =        {Component sizing of a plug-in hybrid electric powertrain via convex optimization},
+  JOURNAL =      {Mechatronics},
+  YEAR =         {2012},
+  volume =       {22},
+  number =       {1},
+  pages =        {106-120},
+}
+
+@CONFERENCE{murgovski12CDC,
+  author =       {Nikolce Murgovski and Lars Johannesson and Anders Grauers and Jonas Sj\"oberg},
+  title =        {Dimensioning and control of a thermally constrained double buffer plug-in {HEV} powertrain},
+  booktitle =    {51st IEEE Conference on Decision and Control},
+  year =         {2012},
+  address =      {Maui, Hawaii},
+}
+
+@ARTICLE{hu13,
+  AUTHOR =       {Xiaosong Hu and Nikolce Murgovski and Lars Johannesson and Bo Egardt},
+  TITLE =        {Energy efficiency analysis of a series plug-in hybrid electric bus with different energy management strategies and battery sizes},
+  JOURNAL =      {Applied Energy},
+  YEAR =         {2013},
+  volume =       {111},
+  number =       {0},
+  pages =        {1001-1009},
+}
+
+
+=====================================================================
+Created by Nikolce Murgovski, 2014-04.
