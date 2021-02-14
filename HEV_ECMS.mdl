@@ -1,12 +1,13 @@
 Model {
   Name			  "HEV_ECMS"
-  Version		  10.0
+  Version		  10.2
   SavedCharacterEncoding  "UTF-8"
+  ModelUUID		  "12b4f97e-f979-4c6a-84d6-46e7fbc43d84"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.99"
+    ComputedModelVersion    "3.0"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -21,7 +22,7 @@ Model {
     NumParameterArguments   0
     NumExternalFileReferences 11
     ExternalFileReference {
-      Reference		      "simulink/Continuous/PID Controller"
+      Reference		      "pid_lib/PID Controller"
       Path		      "HEV_ECMS/PID Controller"
       SID		      "329"
       Type		      "LIBRARY_BLOCK"
@@ -88,10 +89,11 @@ Model {
     }
     OrderedModelArguments   1
   }
-  WebScopes_FoundationPlugin "on"
+  SLCCPlugin		  "on"
   DiagnosticSuppressor	  "on"
   AnimationPlugin	  "on"
-  SLCCPlugin		  "on"
+  slcheck_filter_plugin	  "on"
+  WebScopes_FoundationPlugin "on"
   NotesPlugin		  "on"
   LogicAnalyzerPlugin	  "on"
   EnableAccessToBaseWorkspace on
@@ -117,7 +119,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [0.0, 23.0, 1440.0, 823.0]
+      Location		      [0.0, 25.0, 1440.0, 815.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -144,10 +146,10 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "325"
-	  Extents		  [1402.0, 594.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [-86.250936327355021, 64.31666666666348]
-	  SceneRectInView	  [-86.250936327355021, 64.31666666666348, 1752.5, 742.5]
+	  Extents		  [1402.0, 580.0]
+	  ZoomFactor		  [0.59999999999999987]
+	  Offset		  [-30.088691429383971, -252.03027210884727]
+	  SceneRectInView	  [-30.088691429383971, -252.03027210884727, 2336.666666666667, 966.66666666666686]
 	}
 	Object {
 	  $ObjectID		  6
@@ -155,10 +157,10 @@ Model {
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1402.0, 594.0]
-	  ZoomFactor		  [2.0]
-	  Offset		  [12.499999999999716, 294.50000000000239]
-	  SceneRectInView	  [12.499999999999716, 294.50000000000239, 701.0, 297.0]
+	  Extents		  [1402.0, 580.0]
+	  ZoomFactor		  [1.9528619528619529]
+	  Offset		  [4.0396551724135179, 294.50000000000239]
+	  SceneRectInView	  [4.0396551724135179, 294.50000000000239, 717.9206896551724, 297.0]
 	}
 	Object {
 	  $ObjectID		  7
@@ -206,26 +208,44 @@ Model {
 	}
 	PropName		"EditorsInfo"
       }
-      Object {
-	$PropName		"DockComponentsInfo"
-	$ObjectID		11
-	$ClassName		"Simulink.DockComponentInfo"
-	Type			"GLUE2:PropertyInspector"
-	ID			"Property Inspector"
-	Visible			[0]
-	CreateCallback		""
-	UserData		""
-	Floating		[0]
-	DockPosition		"Right"
-	Width			[640]
-	Height			[480]
-	Minimized		"Unset"
+      Array {
+	Type			"Simulink.DockComponentInfo"
+	Dimension		2
+	Object {
+	  $ObjectID		  11
+	  Type			  "GLUE2:PropertyInspector"
+	  ID			  "Property Inspector"
+	  Visible		  [0]
+	  CreateCallback	  ""
+	  UserData		  ""
+	  Floating		  [0]
+	  DockPosition		  "Right"
+	  Width			  [640]
+	  Height		  [480]
+	  Minimized		  "Unset"
+	}
+	Object {
+	  $ObjectID		  12
+	  Type			  "Simulink:Editor:ReferencedFiles"
+	  ID			  "Referenced Files"
+	  Visible		  [0]
+	  CreateCallback	  ""
+	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
+	  Floating		  [0]
+	  DockPosition		  "Left"
+	  Width			  [640]
+	  Height		  [480]
+	  Minimized		  "Unset"
+	}
+	PropName		"DockComponentsInfo"
       }
-      WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
+      WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABrAP///wAAAAEAAAAAAAAAAPwCA"
-      "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAWgAAACjwAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAA"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABrAP////sAAABgAFMAaQBtAHUAb"
+      "ABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZ"
+      "QBzAAAAAAD/////AAAAjwD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAd"
+      "ABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAFoAAAAoEAAAABAAAAAgAAAAEAAAAC/"
+      "AAAAAEAAAACAAAAAA=="
       Array {
 	Type			"Cell"
 	Dimension		0
@@ -236,15 +256,17 @@ Model {
     BDUuid		    "70ee5a04-c905-475e-9525-a1f97dbc860b"
   }
   HideAutomaticNames	  on
+  SequenceViewerTimePrecision 3
+  SequenceViewerHistory	  1000
   Created		  "Tue Jun 05 14:42:56 2007"
   Creator		  "oberg"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "ruchitbhikadiya"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Feb 23 15:05:26 2020"
-  RTWModifiedTimeStamp	  504371104
-  ModelVersionFormat	  "1.%<AutoIncrement:99>"
+  LastModifiedDate	  "Sun Feb 14 00:37:52 2021"
+  RTWModifiedTimeStamp	  535163851
+  ModelVersionFormat	  "%<AutoIncrement:3.0>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -264,10 +286,7 @@ Model {
   ShowTestPointIcons	  on
   ShowSignalResolutionIcons on
   ShowViewerIcons	  on
-  SortedOrder		  off
   VariantCondition	  off
-  ShowSubsystemDomainSpec off
-  ExecutionContextIcon	  off
   ShowLinearizationAnnotations on
   ShowVisualizeInsertedRTB on
   ShowMarkup		  on
@@ -280,7 +299,7 @@ Model {
   BrowserShowLibraryLinks off
   FunctionConnectors	  off
   BrowserLookUnderMasks	  on
-  MultiThreadCoSim	  on
+  MultiThreadCoSim	  "on"
   SimulationMode	  "normal"
   SILPILModeSetting	  "automated"
   SILPILSystemUnderTest	  "topmodel"
@@ -304,7 +323,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    12
+    $ObjectID		    13
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "HEV_ECMS"
     Array {
@@ -326,6 +345,7 @@ Model {
   ExtModeTrigMode	  "normal"
   ExtModeTrigPort	  "1"
   ExtModeTrigElement	  "any"
+  ExtModeTrigSignalOutputPortIndex 0
   ExtModeTrigDuration	  1000
   ExtModeTrigDurationFloating "auto"
   ExtModeTrigHoldOff	  0
@@ -341,6 +361,7 @@ Model {
   ExtModeSkipDownloadWhenConnect off
   ExtModeLogAll		  on
   ExtModeAutoUpdateStatusClock off
+  VariantFading		  on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
   OrderedModelArguments	  on
@@ -348,16 +369,16 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      13
-      Version		      "19.1.1"
+      $ObjectID		      14
+      Version		      "20.1.0"
       DisabledProps	      []
       Description	      ""
       Array {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
-	  $ObjectID		  14
-	  Version		  "19.1.1"
+	  $ObjectID		  15
+	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
@@ -379,7 +400,6 @@ Model {
 	  RelTol		  "1e-3"
 	  EnableMultiTasking	  on
 	  ConcurrentTasks	  off
-	  Solver		  "FixedStepDiscrete"
 	  SolverName		  "FixedStepDiscrete"
 	  SolverJacobianMethodControl "auto"
 	  ShapePreserveControl	  "DisableAll"
@@ -396,11 +416,11 @@ Model {
 	  SampleTimeProperty	  []
 	  DecoupledContinuousIntegration off
 	  MinimalZcImpactIntegration off
-	  SolverOrder		  3
+	  ODENIntegrationMethod	  "ode3"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  15
-	  Version		  "19.1.1"
+	  $ObjectID		  16
+	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
@@ -441,8 +461,8 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  16
-	  Version		  "19.1.1"
+	  $ObjectID		  17
+	  Version		  "20.1.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    9
@@ -479,6 +499,7 @@ Model {
 	  ExpressionFolding	  on
 	  BooleansAsBitfields	  off
 	  BitfieldContainerType	  "uint_T"
+	  BitwiseOrLogicalOp	  "Same as modeled"
 	  EnableMemcpy		  on
 	  MemcpyThreshold	  64
 	  PassReuseOutputArgsAs	  "Structure reference"
@@ -514,8 +535,8 @@ Model {
 	  EfficientTunableParamExpr off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  17
-	  Version		  "19.1.1"
+	  $ObjectID		  18
+	  Version		  "20.1.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    1
@@ -572,7 +593,6 @@ Model {
 	  UnderSpecifiedDataTypeMsg "none"
 	  UnnecessaryDatatypeConvMsg "none"
 	  VectorMatrixConversionMsg "none"
-	  InvalidFcnCallConnMsg	  "error"
 	  FcnCallInpInsideContextMsg "warning"
 	  SignalLabelMismatchMsg  "none"
 	  UnconnectedInputMsg	  "warning"
@@ -593,6 +613,7 @@ Model {
 	  ModelReferenceIOMismatchMessage "none"
 	  UnknownTsInhSupMsg	  "warning"
 	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceNoExplicitFinalValueMsg	"none"
 	  ModelReferenceSymbolNameMessage "warning"
 	  ModelReferenceExtraNoncontSigs "error"
 	  StateNameClashWarn	  "warning"
@@ -634,10 +655,11 @@ Model {
 	  UnderSpecifiedDimensionMsg "none"
 	  DebugExecutionForFMUViaOutOfProcess off
 	  ArithmeticOperatorsInVariantConditions "warning"
+	  VariantConditionMismatch "none"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  18
-	  Version		  "19.1.1"
+	  $ObjectID		  19
+	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
@@ -686,8 +708,8 @@ Model {
 	  HardwareBoardFeatureSet "EmbeddedCoderHSP"
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  19
-	  Version		  "19.1.1"
+	  $ObjectID		  20
+	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
@@ -706,8 +728,8 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  20
-	  Version		  "19.1.1"
+	  $ObjectID		  21
+	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
@@ -728,7 +750,6 @@ Model {
 	  SimUseLocalCustomCode	  off
 	  SimParseCustomCode	  on
 	  SimAnalyzeCustomCode	  off
-	  SimBuildMode		  "sf_incremental_build"
 	  SimGenImportedTypeDefs  off
 	  ModelFunctionsGlobalVisibility "on"
 	  CompileTimeRecursionLimit 50
@@ -738,11 +759,21 @@ Model {
 	  CustomCodeFunctionArrayLayout	[]
 	  DefaultCustomCodeFunctionArrayLayout "NotSpecified"
 	  CustomCodeUndefinedFunction "UseInterfaceOnly"
+	  CustomCodeGlobalsAsFunctionIO	off
+	  SimTargetLang		  "C"
+	  GPUAcceleration	  off
+	  SimGPUMallocThreshold	  200
+	  SimGPUStackLimitPerThread 1024
+	  SimGPUErrorChecks	  off
+	  SimGPUCustomComputeCapability	""
+	  SimGPUCompilerFlags	  ""
+	  SimDLTargetLibrary	  "mkl-dnn"
+	  SimDLAutoTuning	  on
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  21
-	  Version		  "19.1.1"
+	  $ObjectID		  22
+	  Version		  "20.1.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    16
@@ -811,6 +842,7 @@ Model {
 	  CodeProfilingInstrumentation "off"
 	  SILDebugging		  off
 	  TargetLang		  "C"
+	  GenerateGPUCode	  "None"
 	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
 	  GenerateTraceInfo	  off
 	  GenerateTraceReport	  off
@@ -826,12 +858,28 @@ Model {
 	  RTWCustomCompilerOptimizations ""
 	  CheckMdlBeforeBuild	  "Off"
 	  SharedConstantsCachingThreshold 1024
+	  GPUKernelNamePrefix	  ""
+	  GPUDeviceID		  -1
+	  GPUMallocMode		  "discrete"
+	  GPUMallocThreshold	  200
+	  GPUStackLimitPerThread  1024
+	  GPUcuBLAS		  on
+	  GPUcuSOLVER		  on
+	  GPUcuFFT		  on
+	  GPUErrorChecks	  off
+	  GPUComputeCapability	  "3.5"
+	  GPUCustomComputeCapability ""
+	  GPUCompilerFlags	  ""
+	  DLTargetLibrary	  "none"
+	  DLAutoTuning		  on
+	  DLArmComputeVersion	  "19.05"
+	  DLArmComputeArch	  "unspecified"
 	  Array {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      22
-	      Version		      "19.1.1"
+	      $ObjectID		      23
+	      Version		      "20.1.0"
 	      Array {
 		Type			"Cell"
 		Dimension		28
@@ -920,8 +968,8 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      23
-	      Version		      "19.1.1"
+	      $ObjectID		      24
+	      Version		      "20.1.0"
 	      Array {
 		Type			"Cell"
 		Dimension		16
@@ -965,7 +1013,6 @@ Model {
 	      CompOptLevelCompliant   on
 	      ConcurrentExecutionCompliant on
 	      IncludeMdlTerminateFcn  on
-	      GeneratePreprocessorConditionals "Disable all"
 	      CombineOutputUpdateFcns off
 	      CombineSignalStateStructs	off
 	      GroupInternalDataByFunction off
@@ -975,7 +1022,6 @@ Model {
 	      SupportAbsoluteTime     on
 	      LogVarNameModifier      "rt_"
 	      MatFileLogging	      on
-	      MultiInstanceERTCode    off
 	      CodeInterfacePackaging  "Nonreusable function"
 	      PurelyIntegerCode	      off
 	      SupportNonFinite	      on
@@ -987,7 +1033,6 @@ Model {
 	      SupportVariableSizeSignals off
 	      ParenthesesLevel	      "Nominal"
 	      CastingMode	      "Nominal"
-	      PreserveStateflowLocalDataDimensions off
 	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
 	      ModelStepFunctionPrototypeControlCompliant off
 	      CPPClassGenCompliant    on
@@ -1027,8 +1072,8 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  24
-	  Version		  "19.1.1"
+	  $ObjectID		  25
+	  Version		  "20.1.0"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
 	  Components		  []
@@ -1044,7 +1089,6 @@ Model {
 	  CovFilter		  ""
 	  CovHTMLOptions	  ""
 	  CovNameIncrementing	  off
-	  CovHtmlReporting	  on
 	  CovForceBlockReductionOff on
 	  CovEnableCumulative	  on
 	  CovSaveCumulativeToWorkspaceVar on
@@ -1054,7 +1098,6 @@ Model {
 	  CovSaveOutputData	  on
 	  CovOutputDir		  "slcov_output/$ModelName$"
 	  CovDataFileName	  "$ModelName$_cvdata"
-	  CovShowResultsExplorer  on
 	  CovReportOnPause	  on
 	  CovModelRefEnable	  "off"
 	  CovModelRefExcluded	  ""
@@ -1078,11 +1121,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    13
+    $ObjectID		    14
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    25
+    $ObjectID		    26
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1094,7 +1137,7 @@ Model {
     ForegroundColor	    "black"
     BackgroundColor	    "white"
     DropShadow		    off
-    NamePlacement	    "normal"
+    NameLocation	    "bottom"
     FontName		    "Courier"
     FontSize		    10
     FontWeight		    "normal"
@@ -1179,7 +1222,7 @@ Model {
     Block {
       BlockType		      Demux
       Outputs		      "4"
-      DisplayOption	      "none"
+      DisplayOption	      "bar"
       BusSelectionMode	      off
     }
     Block {
@@ -1204,7 +1247,6 @@ Model {
       ShowStatePort	      off
       IgnoreLimit	      off
       StateMustResolveToSignalObject off
-      RTWStateStorageClass    "Auto"
     }
     Block {
       BlockType		      Display
@@ -1226,13 +1268,13 @@ Model {
       Multiplication	      "Element-wise(K.*u)"
       ParamMin		      "[]"
       ParamMax		      "[]"
-      ParamDataTypeStr	      "Inherit: Same as input"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutMin		      "[]"
       OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as input"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       LockScale		      off
       RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	on
+      SaturateOnIntegerOverflow	off
       SampleTime	      "-1"
     }
     Block {
@@ -1244,6 +1286,7 @@ Model {
     Block {
       BlockType		      Inport
       Port		      "1"
+      IconDisplay	      "Port number"
       OutputFunctionCall      off
       OutMin		      "[]"
       OutMax		      "[]"
@@ -1271,7 +1314,7 @@ Model {
     Block {
       BlockType		      Math
       Operator		      "exp"
-      SignedPower	      on
+      SignedPower	      off
       OutputSignalType	      "auto"
       SampleTime	      "-1"
       OutMin		      "[]"
@@ -1295,6 +1338,7 @@ Model {
     Block {
       BlockType		      Outport
       Port		      "1"
+      IconDisplay	      "Port number"
       OutMin		      "[]"
       OutMax		      "[]"
       OutDataTypeStr	      "Inherit: auto"
@@ -1321,20 +1365,18 @@ Model {
       Multiplication	      "Element-wise(.*)"
       CollapseMode	      "All dimensions"
       CollapseDim	      "1"
-      InputSameDT	      on
+      InputSameDT	      off
       OutMin		      "[]"
       OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as first input"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       LockScale		      off
-      RndMeth		      "Zero"
-      SaturateOnIntegerOverflow	on
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
       SampleTime	      "-1"
     }
     Block {
       BlockType		      Saturate
-      UpperLimitSource	      "Dialog"
       UpperLimit	      "0.5"
-      LowerLimitSource	      "Dialog"
       LowerLimit	      "-0.5"
       LinearizeAsGain	      on
       ZeroCross		      on
@@ -1379,7 +1421,6 @@ Model {
       PermitHierarchicalResolution "All"
       TreatAsAtomicUnit	      off
       MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
       ScheduleAs	      "Sample time"
       SystemSampleTime	      "-1"
       RTWSystemCode	      "Auto"
@@ -1387,45 +1428,47 @@ Model {
       RTWFileNameOpts	      "Auto"
       FunctionInterfaceSpec   "void_void"
       FunctionWithSeparateData off
+      MatchGraphicalInterface off
       RTWMemSecFuncInitTerm   "Inherit from model"
       RTWMemSecFuncExecute    "Inherit from model"
       RTWMemSecDataConstants  "Inherit from model"
       RTWMemSecDataInternal   "Inherit from model"
       RTWMemSecDataParameters "Inherit from model"
       SimViewingDevice	      off
+      ActiveForDiff	      off
       DataTypeOverride	      "UseLocalSettings"
       DataTypeOverrideAppliesTo	"AllNumericTypes"
       MinMaxOverflowLogging   "UseLocalSettings"
       Opaque		      off
       MaskHideContents	      off
       SFBlockType	      "NONE"
-      VariantControlMode      "Expression"
       Variant		      off
-      GeneratePreprocessorConditionals off
+      VariantControlMode      "expression"
+      VariantActivationTime   "update diagram"
       AllowZeroVariantControls off
       PropagateVariantConditions off
       TreatAsGroupedWhenPropagatingVariantConditions on
       ContentPreviewEnabled   off
       IsWebBlock	      off
-      IsObserver	      off
+      IsInjectorSS	      off
       Latency		      "0"
       AutoFrameSizeCalculation off
       IsWebBlockPanel	      off
     }
     Block {
       BlockType		      Sum
-      IconShape		      "rectangular"
+      IconShape		      "round"
       Inputs		      "++"
       CollapseMode	      "All dimensions"
       CollapseDim	      "1"
-      InputSameDT	      on
+      InputSameDT	      off
       AccumDataTypeStr	      "Inherit: Inherit via internal rule"
       OutMin		      "[]"
       OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as first input"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       LockScale		      off
       RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	on
+      SaturateOnIntegerOverflow	off
       SampleTime	      "-1"
     }
     Block {
@@ -1446,7 +1489,8 @@ Model {
   }
   System {
     Name		    "HEV_ECMS"
-    Location		    [0, 23, 1440, 846]
+    Location		    [0, 25, 1440, 840]
+    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
     Open		    off
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1461,7 +1505,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "200"
+    ZoomFactor		    "195"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "337"
     SimulinkSubDomain	    "Simulink"
@@ -1489,15 +1533,20 @@ Model {
       Ports		      [1, 1]
       Position		      [210, 307, 250, 343]
       ZOrder		      308
-      LibraryVersion	      "1.453"
-      SourceBlock	      "simulink/Continuous/PID Controller"
+      LibraryVersion	      "2.30"
+      SourceBlock	      "pid_lib/PID Controller"
       SourceType	      "PID 1dof"
-      SourceProductName	      "Simulink"
       SourceProductBaseCode   "SL"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
       ContentPreviewEnabled   on
       Controller	      "PID"
       Form		      "Parallel"
       TimeDomain	      "Discrete-time"
+      UseExternalTs	      off
       SampleTime	      "-1"
       IntegratorMethod	      "Forward Euler"
       FilterMethod	      "Forward Euler"
@@ -1518,6 +1567,7 @@ Model {
       TrackingMode	      off
       Kt		      "1"
       LimitOutput	      off
+      SatLimitsSource	      "internal"
       UpperSaturationLimit    "inf"
       LowerSaturationLimit    "-inf"
       LinearizeAsGain	      on
@@ -1623,6 +1673,18 @@ Model {
       DivideOutDataTypeStr    "Inherit: Inherit via internal rule"
       DivideOutMin	      "[]"
       DivideOutMax	      "[]"
+      UdiffTsProdOutDataTypeStr	"Inherit: Inherit via internal rule"
+      UdiffTsProdOutMin	      "[]"
+      UdiffTsProdOutMax	      "[]"
+      NTsProdOutDataTypeStr   "Inherit: Inherit via internal rule"
+      NTsProdOutMin	      "[]"
+      NTsProdOutMax	      "[]"
+      UintegralTsProdOutDataTypeStr "Inherit: Inherit via internal rule"
+      UintegralTsProdOutMin   "[]"
+      UintegralTsProdOutMax   "[]"
+      UngainTsProdOutDataTypeStr "Inherit: Inherit via internal rule"
+      UngainTsProdOutMin      "[]"
+      UngainTsProdOutMax      "[]"
       IntegratorContinuousStateAttributes "''"
       IntegratorStateMustResolveToSignalObject off
       IntegratorRTWStateStorageClass "Auto"
@@ -1650,6 +1712,10 @@ Model {
       TRSumVariant	      "Passthrough"
       SumFdbkVariant	      "Disabled"
       SumVariant	      "Sum_PID"
+      TsampFilterVariant      "InternalTs"
+      TsampNgainVariant	      "Passthrough"
+      TsampIntegralVariant    "Passthrough"
+      ExternalSaturationOutDataTypeStr "Inherit: Same as second input"
       InitialConditionSetting "Auto"
     }
     Block {
@@ -1743,7 +1809,8 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"Subsystem"
-	Location		[0, 23, 1440, 846]
+	Location		[0, 25, 1440, 840]
+	SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
 	Open			on
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -1758,7 +1825,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"60"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -1766,7 +1833,6 @@ Model {
 	  SID			  "326"
 	  Position		  [110, 103, 140, 117]
 	  ZOrder		  -1
-	  IconDisplay		  "Port number"
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -1780,41 +1846,41 @@ Model {
 	  RequestExecContextInheritance	off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    26
+	    $ObjectID		    27
 	    $ClassName		    "Simulink.Mask"
 	    Array {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      5
 	      Object {
-		$ObjectID		27
+		$ObjectID		28
 		Type			"edit"
 		Name			"U_oc"
 		Prompt			"Open-Circuit Voltage [V]"
 		Value			"data.Uoc"
 	      }
 	      Object {
-		$ObjectID		28
+		$ObjectID		29
 		Type			"edit"
 		Name			"R_i"
 		Prompt			"Inner Resistance [Ohm]"
 		Value			"data.Ri"
 	      }
 	      Object {
-		$ObjectID		29
+		$ObjectID		30
 		Type			"edit"
 		Name			"Q_0"
 		Prompt			"Capacity [Ah]"
 		Value			"data.Q"
 	      }
 	      Object {
-		$ObjectID		30
+		$ObjectID		31
 		Type			"edit"
 		Name			"SOC_0"
 		Prompt			"Initial SOC [-]"
 		Value			"0.5"
 	      }
 	      Object {
-		$ObjectID		31
+		$ObjectID		32
 		Type			"edit"
 		Name			"I_max"
 		Prompt			"Max current [I]"
@@ -1826,6 +1892,7 @@ Model {
 	  System {
 	    Name		    "Battery"
 	    Location		    [0, 23, 1440, 846]
+	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
 	    SetExecutionDomain	    off
@@ -1848,7 +1915,6 @@ Model {
 	      SID		      "43"
 	      Position		      [130, 453, 160, 467]
 	      ZOrder		      -1
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Sum
@@ -1857,10 +1923,8 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [320, 391, 350, 424]
 	      ZOrder		      -2
+	      IconShape		      "rectangular"
 	      Inputs		      "+-"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Sum
@@ -1869,10 +1933,8 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [465, 356, 495, 389]
 	      ZOrder		      -3
+	      IconShape		      "rectangular"
 	      Inputs		      "+-"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Reference
@@ -1881,11 +1943,15 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [910, 325, 940, 355]
 	      ZOrder		      8
-	      LibraryVersion	      "1.453"
+	      LibraryVersion	      "1.476"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 	      SourceType	      "Compare To Constant"
-	      SourceProductName	      "Simulink"
 	      SourceProductBaseCode   "SL"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
 	      ContentPreviewEnabled   off
 	      relop		      ">"
 	      const		      "1"
@@ -1899,11 +1965,15 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [910, 435, 940, 465]
 	      ZOrder		      7
-	      LibraryVersion	      "1.453"
+	      LibraryVersion	      "1.476"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
 	      SourceType	      "Compare To Zero"
-	      SourceProductName	      "Simulink"
 	      SourceProductBaseCode   "SL"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
 	      ContentPreviewEnabled   off
 	      relop		      "<"
 	      OutDataTypeStr	      "boolean"
@@ -1961,10 +2031,6 @@ Model {
 	      Position		      [540, 367, 570, 398]
 	      ZOrder		      -9
 	      Inputs		      "*/"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	      Port {
 		PortNumber		1
 		Name			"I_batt"
@@ -1978,10 +2044,6 @@ Model {
 	      Position		      [760, 377, 790, 408]
 	      ZOrder		      -10
 	      Inputs		      "*/"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Gain
@@ -1990,9 +2052,6 @@ Model {
 	      Position		      [210, 445, 240, 475]
 	      ZOrder		      -11
 	      Gain		      "4*R_i"
-	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Gain
@@ -2001,9 +2060,6 @@ Model {
 	      Position		      [485, 445, 515, 475]
 	      ZOrder		      -12
 	      Gain		      "2"
-	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Gain
@@ -2012,9 +2068,6 @@ Model {
 	      Position		      [640, 370, 685, 400]
 	      ZOrder		      -13
 	      Gain		      "-1"
-	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Sqrt
@@ -2051,6 +2104,7 @@ Model {
 	      System {
 		Name			"Supervision\nbattery"
 		Location		[0, 23, 1440, 846]
+		SystemRect		[0.000000, 0.000000, 0.000000, 0.000000]
 		Open			off
 		PortBlocksUseCompactNotation off
 		SetExecutionDomain	off
@@ -2076,7 +2130,6 @@ Model {
 		  Position		  [65, 48, 95, 62]
 		  ZOrder		  -1
 		  BackgroundColor	  "green"
-		  IconDisplay		  "Port number"
 		}
 		Block {
 		  BlockType		  Inport
@@ -2086,7 +2139,6 @@ Model {
 		  ZOrder		  -2
 		  BackgroundColor	  "green"
 		  Port			  "2"
-		  IconDisplay		  "Port number"
 		}
 		Block {
 		  BlockType		  Abs
@@ -2144,9 +2196,12 @@ Model {
 		  Position		  [135, 114, 260, 156]
 		  ZOrder		  -8
 		  BackgroundColor	  "yellow"
-		  NamePlacement		  "alternate"
+		  NameLocation		  "top"
 		  ShowName		  off
 		  Gain			  "1/(4*R_i)"
+		  ParamDataTypeStr	  "Inherit: Same as input"
+		  OutDataTypeStr	  "Inherit: Same as input"
+		  SaturateOnIntegerOverflow on
 		}
 		Block {
 		  BlockType		  Math
@@ -2156,16 +2211,15 @@ Model {
 		  Position		  [85, 122, 115, 153]
 		  ZOrder		  -9
 		  Operator		  "pow"
+		  SignedPower		  on
 		}
 		Block {
 		  BlockType		  Saturate
 		  Name			  "Saturation"
 		  SID			  "62:227"
-		  Ports			  [1, 1]
 		  Position		  [385, 200, 415, 230]
 		  ZOrder		  -10
 		  ShowName		  off
-		  InputPortMap		  "u0"
 		  UpperLimit		  "0"
 		  LowerLimit		  "-inf"
 		}
@@ -2173,11 +2227,9 @@ Model {
 		  BlockType		  Saturate
 		  Name			  "Saturation1"
 		  SID			  "62:228"
-		  Ports			  [1, 1]
 		  Position		  [385, 90, 415, 120]
 		  ZOrder		  -11
 		  ShowName		  off
-		  InputPortMap		  "u0"
 		  UpperLimit		  "0"
 		  LowerLimit		  "-inf"
 		}
@@ -2283,7 +2335,11 @@ Model {
 		  Position		  [335, 46, 350, 164]
 		  ZOrder		  -19
 		  ShowName		  off
+		  IconShape		  "rectangular"
 		  Inputs		  "-+"
+		  InputSameDT		  on
+		  OutDataTypeStr	  "Inherit: Same as first input"
+		  SaturateOnIntegerOverflow on
 		}
 		Block {
 		  BlockType		  Sum
@@ -2293,7 +2349,11 @@ Model {
 		  Position		  [280, 177, 295, 248]
 		  ZOrder		  -20
 		  ShowName		  off
+		  IconShape		  "rectangular"
 		  Inputs		  "+-"
+		  InputSameDT		  on
+		  OutDataTypeStr	  "Inherit: Same as first input"
+		  SaturateOnIntegerOverflow on
 		}
 		Block {
 		  BlockType		  Sum
@@ -2303,6 +2363,10 @@ Model {
 		  Position		  [280, 37, 295, 108]
 		  ZOrder		  -21
 		  ShowName		  off
+		  IconShape		  "rectangular"
+		  InputSameDT		  on
+		  OutDataTypeStr	  "Inherit: Same as first input"
+		  SaturateOnIntegerOverflow on
 		}
 		Line {
 		  ZOrder		  1
@@ -2460,7 +2524,6 @@ Model {
 	      SID		      "196"
 	      Position		      [960, 388, 990, 402]
 	      ZOrder		      5
-	      IconDisplay	      "Port number"
 	      VectorParamsAs1DForOutWhenUnconnected off
 	    }
 	    Line {
@@ -2641,6 +2704,7 @@ Model {
 	  System {
 	    Name		    "Combustion Engine"
 	    Location		    [0, 23, 1440, 846]
+	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
 	    SetExecutionDomain	    off
@@ -2664,7 +2728,6 @@ Model {
 	      Position		      [15, 255, 35, 275]
 	      ZOrder		      -1
 	      BackgroundColor	      "green"
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Inport
@@ -2674,7 +2737,6 @@ Model {
 	      ZOrder		      -2
 	      BackgroundColor	      "green"
 	      Port		      "2"
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Inport
@@ -2684,7 +2746,6 @@ Model {
 	      ZOrder		      -3
 	      BackgroundColor	      "green"
 	      Port		      "3"
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Reference
@@ -2693,11 +2754,15 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [105, 340, 145, 370]
 	      ZOrder		      323
-	      LibraryVersion	      "1.453"
+	      LibraryVersion	      "1.476"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 	      SourceType	      "Compare To Constant"
-	      SourceProductName	      "Simulink"
 	      SourceProductBaseCode   "SL"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
 	      ContentPreviewEnabled   on
 	      relop		      ">"
 	      const		      "115"
@@ -2720,10 +2785,6 @@ Model {
 	      Position		      [385, 362, 415, 393]
 	      ZOrder		      16
 	      Inputs		      "*/"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Product
@@ -2733,10 +2794,6 @@ Model {
 	      Position		      [365, 487, 395, 518]
 	      ZOrder		      22
 	      Inputs		      "*/"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Constant
@@ -2753,10 +2810,6 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [295, 472, 325, 503]
 	      ZOrder		      15
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Product
@@ -2765,10 +2818,6 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [305, 522, 335, 553]
 	      ZOrder		      23
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Product
@@ -2777,10 +2826,6 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [115, 437, 145, 468]
 	      ZOrder		      24
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Product
@@ -2789,10 +2834,6 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [540, 372, 570, 403]
 	      ZOrder		      27
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Stop
@@ -2809,11 +2850,7 @@ Model {
 	      Position		      [405, 445, 425, 465]
 	      ZOrder		      32
 	      ShowName		      off
-	      IconShape		      "round"
 	      Inputs		      "|++"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Sum
@@ -2823,11 +2860,7 @@ Model {
 	      Position		      [170, 385, 190, 405]
 	      ZOrder		      29
 	      ShowName		      off
-	      IconShape		      "round"
 	      Inputs		      "|++"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Switch
@@ -2885,7 +2918,6 @@ Model {
 	      SID		      "114"
 	      Position		      [785, 393, 815, 407]
 	      ZOrder		      -11
-	      IconDisplay	      "Port number"
 	      VectorParamsAs1DForOutWhenUnconnected off
 	    }
 	    Line {
@@ -3073,7 +3105,7 @@ Model {
 	  Position		  [550, 389, 615, 581]
 	  ZOrder		  55
 	  BackgroundColor	  "magenta"
-	  MATLABFcn		  "parallelhybrid_ECMS(u)"
+	  MATLABFcn		  "MATLAB_to_Python(u)"
 	}
 	Block {
 	  BlockType		  Demux
@@ -3084,7 +3116,6 @@ Model {
 	  ZOrder		  54
 	  ShowName		  off
 	  Outputs		  "2"
-	  DisplayOption		  "bar"
 	}
 	Block {
 	  BlockType		  Display
@@ -3128,6 +3159,11 @@ Model {
 	  LibraryVersion	  "1.164"
 	  SourceBlock		  "qss_tb_library/Driving Cycle/Driving Cycle"
 	  SourceType		  "Driving Cycle"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
 	  ContentPreviewEnabled	  off
 	  cyclenr		  "Europe: EUDC manual"
 	  stepsize		  "1"
@@ -3146,6 +3182,7 @@ Model {
 	  System {
 	    Name		    "Electric Motor"
 	    Location		    [0, 23, 1440, 846]
+	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
 	    SetExecutionDomain	    off
@@ -3168,7 +3205,6 @@ Model {
 	      SID		      "82"
 	      Position		      [130, 513, 160, 527]
 	      ZOrder		      -1
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Inport
@@ -3177,7 +3213,6 @@ Model {
 	      Position		      [130, 453, 160, 467]
 	      ZOrder		      -2
 	      Port		      "2"
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Reference
@@ -3186,11 +3221,15 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [155, 377, 195, 403]
 	      ZOrder		      288
-	      LibraryVersion	      "1.453"
+	      LibraryVersion	      "1.476"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 	      SourceType	      "Compare To Constant"
-	      SourceProductName	      "Simulink"
 	      SourceProductBaseCode   "SL"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
 	      ContentPreviewEnabled   on
 	      relop		      ">"
 	      const		      "400"
@@ -3204,11 +3243,15 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [275, 392, 320, 418]
 	      ZOrder		      291
-	      LibraryVersion	      "1.453"
+	      LibraryVersion	      "1.476"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 	      SourceType	      "Compare To Constant"
-	      SourceProductName	      "Simulink"
 	      SourceProductBaseCode   "SL"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
 	      ContentPreviewEnabled   on
 	      relop		      "<"
 	      const		      "-400"
@@ -3222,11 +3265,15 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [575, 407, 625, 433]
 	      ZOrder		      293
-	      LibraryVersion	      "1.453"
+	      LibraryVersion	      "1.476"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 	      SourceType	      "Compare To Constant"
-	      SourceProductName	      "Simulink"
 	      SourceProductBaseCode   "SL"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
 	      ContentPreviewEnabled   on
 	      relop		      ">"
 	      const		      "50e3"
@@ -3240,11 +3287,15 @@ Model {
 	      Ports		      [1, 1]
 	      Position		      [430, 392, 485, 418]
 	      ZOrder		      295
-	      LibraryVersion	      "1.453"
+	      LibraryVersion	      "1.476"
 	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
 	      SourceType	      "Compare To Constant"
-	      SourceProductName	      "Simulink"
 	      SourceProductBaseCode   "SL"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
 	      ContentPreviewEnabled   on
 	      relop		      "<"
 	      const		      "-50000"
@@ -3267,10 +3318,6 @@ Model {
 	      Position		      [575, 467, 605, 498]
 	      ZOrder		      267
 	      Inputs		      "*/"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Product
@@ -3279,10 +3326,6 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [380, 472, 410, 503]
 	      ZOrder		      268
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Math
@@ -3292,6 +3335,7 @@ Model {
 	      Position		      [480, 527, 510, 558]
 	      ZOrder		      269
 	      Operator		      "pow"
+	      SignedPower	      on
 	    }
 	    Block {
 	      BlockType		      Signum
@@ -3334,7 +3378,6 @@ Model {
 	      SID		      "81"
 	      Position		      [680, 478, 710, 492]
 	      ZOrder		      -8
-	      IconDisplay	      "Port number"
 	      VectorParamsAs1DForOutWhenUnconnected off
 	    }
 	    Line {
@@ -3661,6 +3704,11 @@ Model {
 	  LibraryVersion	  "1.164"
 	  SourceBlock		  "qss_tb_library/Gear System/Manual Gear Box"
 	  SourceType		  "Manual Gear Box"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
 	  ContentPreviewEnabled	  off
 	  i_1			  "13.0529"
 	  i_2			  "8.1595"
@@ -3694,20 +3742,20 @@ Model {
 	  RequestExecContextInheritance	off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    32
+	    $ObjectID		    33
 	    $ClassName		    "Simulink.Mask"
 	    Array {
 	      Type		      "Simulink.MaskParameter"
 	      Dimension		      2
 	      Object {
-		$ObjectID		33
+		$ObjectID		34
 		Type			"edit"
 		Name			"Hlhv"
 		Prompt			"Lower Heating Value"
 		Value			"data.Hlhv"
 	      }
 	      Object {
-		$ObjectID		34
+		$ObjectID		35
 		Type			"edit"
 		Name			"rho_f"
 		Prompt			"Density [kg/m^3]"
@@ -3719,6 +3767,7 @@ Model {
 	  System {
 	    Name		    "Power->Consumption"
 	    Location		    [8, 8, 1740, 1070]
+	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
 	    SetExecutionDomain	    off
@@ -3741,7 +3790,6 @@ Model {
 	      SID		      "122"
 	      Position		      [130, 453, 160, 467]
 	      ZOrder		      -1
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Inport
@@ -3750,7 +3798,6 @@ Model {
 	      Position		      [130, 498, 160, 512]
 	      ZOrder		      -2
 	      Port		      "2"
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      DiscreteIntegrator
@@ -3772,10 +3819,6 @@ Model {
 	      Position		      [830, 467, 860, 498]
 	      ZOrder		      -4
 	      Inputs		      "*/"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      RndMeth		      "Floor"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Gain
@@ -3784,9 +3827,6 @@ Model {
 	      Position		      [210, 437, 320, 473]
 	      ZOrder		      -5
 	      Gain		      "1/Hlhv"
-	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Scope
@@ -3826,9 +3866,6 @@ Model {
 	      Position		      [405, 436, 540, 474]
 	      ZOrder		      -8
 	      Gain		      "1000/rho_f"
-	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Gain
@@ -3837,9 +3874,6 @@ Model {
 	      Position		      [405, 486, 540, 524]
 	      ZOrder		      -9
 	      Gain		      "1/(100000)"
-	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -3847,7 +3881,6 @@ Model {
 	      SID		      "137"
 	      Position		      [930, 478, 960, 492]
 	      ZOrder		      -10
-	      IconDisplay	      "Port number"
 	      VectorParamsAs1DForOutWhenUnconnected off
 	    }
 	    Line {
@@ -3933,20 +3966,20 @@ Model {
 	  ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extmgr."
 	  "Configuration('Core','General UI',true,'FigureColor',[1 1 1]),extmgr.Configuration('Core','Source UI',true),extmgr."
 	  "Configuration('Sources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals'"
-	  ",'Time Domain',true,'SerializedDisplays',{struct('MinYLimReal','0.43727','MaxYLimReal','1.06461','YLabelReal','','M"
-	  "inYLimMag','0.43727','MaxYLimMag','1.06461','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false"
+	  ",'Time Domain',true,'SerializedDisplays',{struct('MinYLimReal','0.40566','MaxYLimReal','0.51048','YLabelReal','','M"
+	  "inYLimMag','0.40566','MaxYLimMag','0.51048','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false"
 	  ",'AxesColor',[1 1 1],'AxesTickColor',[0 0 0],'ColorOrder',[0 0.447058823529412 0.741176470588235;0.850980392156863 "
 	  "0.325490196078431 0.0980392156862745;0.929411764705882 0.694117647058824 0.125490196078431;0.494117647058824 0.1843"
 	  "13725490196 0.556862745098039;0.466666666666667 0.674509803921569 0.188235294117647;0.301960784313725 0.74509803921"
 	  "5686 0.933333333333333;0.635294117647059 0.0784313725490196 0.184313725490196],'Title','%<SignalLabel>','LineProper"
 	  "tiesCache',{{struct('Color',[0 0 0],'LineStyle','-','LineWidth',1,'Marker','none','Visible','on')}},'UserDefinedCha"
 	  "nnelNames',{{}},'NumLines',1,'LineNames',{{'Battery'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults'"
-	  ",struct('MinYLimReal','0.43727','MaxYLimReal','1.06461','YLabelReal','','MinYLimMag','0.43727','MaxYLimMag','1.0646"
-	  "1','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[1 1 1],'AxesTickColor',[0 0"
+	  ",struct('MinYLimReal','0.40566','MaxYLimReal','0.51048','YLabelReal','','MinYLimMag','0.40566','MaxYLimMag','0.5104"
+	  "8','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[1 1 1],'AxesTickColor',[0 0"
 	  " 0],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.1607843137254"
 	  "9;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1"
 	  " 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>')),extmgr.Configuration('Tools','Plot Navigation"
-	  "',true),extmgr.Configuration('Tools','Measurements',true,'Version','2019b')),'Version','2019b','Position',[440 234 "
+	  "',true),extmgr.Configuration('Tools','Measurements',true,'Version','2020b')),'Version','2020b','Position',[440 234 "
 	  "560 420])"
 	  NumInputPorts		  "1"
 	  Floating		  off
@@ -4093,6 +4126,7 @@ Model {
 	  System {
 	    Name		    "Torque-following"
 	    Location		    [0, 23, 1440, 846]
+	    SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
 	    SetExecutionDomain	    off
@@ -4115,7 +4149,6 @@ Model {
 	      SID		      "165"
 	      Position		      [110, 103, 140, 117]
 	      ZOrder		      -1
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Inport
@@ -4124,7 +4157,6 @@ Model {
 	      Position		      [110, 183, 140, 197]
 	      ZOrder		      1
 	      Port		      "2"
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Inport
@@ -4133,7 +4165,6 @@ Model {
 	      Position		      [110, 243, 140, 257]
 	      ZOrder		      2
 	      Port		      "3"
-	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Sum
@@ -4142,10 +4173,8 @@ Model {
 	      Ports		      [3, 1]
 	      Position		      [285, 154, 315, 186]
 	      ZOrder		      3
+	      IconShape		      "rectangular"
 	      Inputs		      "+--"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Sum
@@ -4154,10 +4183,8 @@ Model {
 	      Ports		      [2, 1]
 	      Position		      [340, 161, 370, 194]
 	      ZOrder		      8
+	      IconShape		      "rectangular"
 	      Inputs		      "+-"
-	      InputSameDT	      off
-	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-	      SaturateOnIntegerOverflow	off
 	    }
 	    Block {
 	      BlockType		      Constant
@@ -4171,11 +4198,9 @@ Model {
 	      BlockType		      Saturate
 	      Name		      "Saturation1"
 	      SID		      "173"
-	      Ports		      [1, 1]
 	      Position		      [405, 165, 435, 195]
 	      ZOrder		      6
 	      ShowName		      off
-	      InputPortMap	      "u0"
 	      UpperLimit	      "inf"
 	      LowerLimit	      "0"
 	    }
@@ -4255,6 +4280,11 @@ Model {
 	  LibraryVersion	  "1.164"
 	  SourceBlock		  "qss_tb_library/Vehicle/Vehicle"
 	  SourceType		  "Vehicle"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
 	  ContentPreviewEnabled	  off
 	  m_f			  "1500"
 	  mt2m_f		  "0.44"
@@ -4269,7 +4299,6 @@ Model {
 	  SID			  "327"
 	  Position		  [360, 103, 390, 117]
 	  ZOrder		  -2
-	  IconDisplay		  "Port number"
 	}
 	Line {
 	  ZOrder		  2
@@ -4588,10 +4617,8 @@ Model {
       Ports		      [2, 1]
       Position		      [130, 307, 160, 338]
       ZOrder		      310
+      IconShape		      "rectangular"
       Inputs		      "+-"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
     }
     Line {
       ZOrder		      218
